@@ -9,10 +9,10 @@ const cors = require('cors');
 
 
 
-const allowedOrigins = [
-        'http://localhost:5173', // Frontend on localhost
+// const allowedOrigins = [
+//         'http://localhost:5173', // Frontend on localhost
        
-      ];
+//       ];
 
 
 //Middleware
@@ -20,17 +20,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 dotenv.config();
 app.use(cors(
-    {
-          origin: (origin, callback) => {
-            if (!origin || allowedOrigins.includes(origin)) {
-              callback(null, true);
-            } else {
-              callback(new Error('Not allowed by CORS'));
-            }
-          },
-          methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-          credentials: true,
-        }
+    // {
+    //       origin: (origin, callback) => {
+    //         if (!origin || allowedOrigins.includes(origin)) {
+    //           callback(null, true);
+    //         } else {
+    //           callback(new Error('Not allowed by CORS'));
+    //         }
+    //       },
+    //       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    //       credentials: true,
+    //     }
 ));
 
 
