@@ -8,7 +8,7 @@ import Dashboard from "../Components/Dashboard";
 const Routing =()=>{
 
     const routesConfig=[
-        { path : "/" , component : <Home/>},
+        { path : "/" , component : <Login/>},
         { path : "/login" , component : <Login/>},
         { path : "/register" , component : <Register/>},
         { path : "/dashboard" , component : <Dashboard/>},
